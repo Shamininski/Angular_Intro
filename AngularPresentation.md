@@ -38,7 +38,8 @@
 
 In this part, we are going to learn how to bind classes and styles to an HTML element.
 First, let us create a new class, as shown below
-```
+
+```javascript
 @Component({ 
            selector: "my-tuts", 
            template: `<h2>{{title}}</h2>`, 
@@ -51,7 +52,7 @@ First, let us create a new class, as shown below
 
 What does class binding do? It is going to assign a class to HTML elements, which is based on an expression, which evaluates as true or false. Let’s create a div tag, as shown below.
 
-```
+```html
 <div [class.myClass]=" ">Apply Class Binding</div>`,
 ```
 
@@ -63,7 +64,7 @@ Let us create a variable, (on the code editor).
 That’s how class binding works. Similarly, we have style binding in order to apply inline styles to HTML elements.
 Let’s create another property, as shown below.
 
-```
+```javascript
 export class RathrolaComponent { 
    public title = "Tutorials from Rathrola"; 
    public applyclass = true; 
@@ -73,13 +74,13 @@ export class RathrolaComponent {
 
 Now, let’s create another div tag, as shown below.
 
-```
+```html
 <div [style.color]="applyblue?'blue':orange">Blue</div>`,
 ```
 
 If the two variables are false, we'll use the code given below.
 
-```
+```javascript
 export class RathrolaComponent { 
    public title = "Tutorials from Rathrola"; 
    public applyclass = false; 
@@ -91,14 +92,14 @@ export class RathrolaComponent {
 
 ## <a name="chapter6"/>Event Binding and references
 
-In this article, we are going to learn about event binding and references.
+In this section, we are going to learn about event binding and references.
 Now, we are only setting the values to DOM element properties, but there is no way to retrieve DOM element properties.
 
 For Example
 There might be a situation where the user will fill out a form or click a button, which results in the flow of data from the view to our component's class. This is where event binding comes into the picture by helping us to capture the data flow from the view to the component.
 In order to understand event binding better, let’s first create a button, as shown below.
  
- ```
+ ```javascript
 @Component({ 
    selector: "my-tuts", 
    template: `<h2>{{title}}</h2> 
@@ -107,21 +108,53 @@ In order to understand event binding better, let’s first create a button, as s
 ```
 Just like how we have square brackets for property binding, for event binding we use parentheses, (),as shown below 
 
-```
-<button(click)="onClick()">Click me </button>
+```html 
+<button (click)="onClick()">Click me </button>
 ```
 In our class, let’s define the method, as shown below.
-```
+
+```javascript
 onClick(){ 
 console.log('ButtonClicked');
 }
 ```
+Save this and run it...
 
-## <a name="chapter7"/>Save this and run it 
+in Angular, it is very easy to reference HTML tags or the elements. Now, to reference an element, all we need to do is use the hash (#) symbol with any random variable, as shown below.
 
+```html
+<input type=text #demoInput>`
+```
 
+In order to get the data which is flowing from an input tag, we can use a reference variable.
 
-## <a name="chapter8"/>Two way Binding
+## For Example
+Let’s say, we passed demoInput.value as one of the parameters for the onClick method.
+```html
+<button (click)="onClick(demoInput.value)">Click me</button>
+```
+Pass the value to the onClick value and log the value, as shown below.
+
+```javascript
+export class RathrolaComponent {  
+    public title = "Tutorials from Rathrola";  
+    onClick(value) {  
+        console.log(value);  
+    }  
+}
+```
+
+Save and run.
+
+Key in some value, say, Hello world, and watch the console. It is going to log the input field, as shown below.
+
+That is how event binding works; we have bound the button click event with a handler calledonClick. We are going to use the reference to input the elements. By passing its value, we can retrieve the value in our class.
+
+Finally, to capture the event, we use $event, as shown below.
+```html
+<button (click)="onClick($event)">Click me</button>
+```
+## <a name="chapter7"/>Two way Binding
 
 
 
