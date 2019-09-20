@@ -9,12 +9,73 @@
 <!-- Noel's Section -->
 
 ## <a name="chapter1"/> Introduction
+Angular is a JavaScript open-source front-end web application framework. It is primarily sustained by Google together with an extended community of people and companies, to approach many of the challenges faced when developing single page, cross platform, performant applications. It is fully extensible and works well with other libraries. 
+
+Angular is a great tool that will:
+
+ i)Enable you to create software quicker and with less effort
+ ii)Result in a more maintainable software
+ iii)Encourage good programming practices and design patterns like MVC
+ iv)Allow you to collaborate easier with other people
+ v)Allow you to become proficient in a reasonable time
+ vi)Address problems that may arise in your software architecture such as Dependency Injection, DRY (Don’t Repeat Yourself), etc
 
 ## <a name="chapter2"/>Architecture
 
+The basic building blocks of an Angular application are NgModules, which provide a compilation context for components. NgModules collect related code into functional sets; an Angular app is defined by a set of NgModules. An app always has at least a root module that enables bootstrapping, and typically has many more feature modules.
+
+Components define views, which are sets of screen elements that Angular can choose among and modify according to your program logic and data.
+
+Components use services, which provide specific functionality not directly related to views. Service providers can be injected into components as dependencies, making your code modular, reusable, and efficient.
+  
+
+https://angular.io/generated/images/guide/architecture/overview2.png
+
 ## <a name="chapter3"/>Components
+Components are the most basic building block of an UI and Angular applications. A component controls one or more sections on the screen (what we call views). 
+
+A component is self contained and represents a reusable piece of UI that is usually constituted by three important things:
+
+i)A piece of html code that is known as the view
+ii)A class that encapsulates all available data and interactions to that view through an API of properties and methods architectured by Angular. Here’s where we define the application logic (what it does to support the view)
+And the aforementioned html element also known as selector.
+Using the Angular @Component decorator we provide additional metadata that determines how the component should be processed, instantiated and used at runtime. For example we set the html template related to the view, then, we set the html selector that we are going to use for that component, we set stylesheets for that component.
+
+        ```
+            @Component({
+            selector: 'my-app',
+            templateUrl: './app.component.html',
+            styleUrls: [ './app.component.css' ]
+            })
+            export class AppComponent  {
+            name = 'Angular';
+            }
+            ```
 
 ## <a name="chapter4"/>Interpolation and Property Binding
+What is Interpolation?
+
+Angular interpolation is used for display a component property in the respective view template with double curly braces syntax. We can display all kind of properties data into view e.g. string, number, date, arrays, list or map.
+    ```
+        class AppComponent {
+
+                propertyName: string;
+                object: DomainObject;
+            }
+            
+            {{ propertyName }}
+            
+            {{ object.propertyName }}
+            ```
+
+Angular automatically pulls the value of the propertyName and object.propertyName from the component and inserts those values into the browser. Angular updates the display when these properties change.
+
+
+
+
+Data binding consist of one way data binding and two way data binding. Interpolation is used for one way data binding. Interpolation moves data in one direction from our components to HTML elements.
+
+
 
 <!-- Justine's Section-->
 
