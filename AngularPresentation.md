@@ -145,7 +145,7 @@ Finally, to capture the event, we use \$event, as shown below.
 ```
 
 ## <a name="chapter7"/>Two way Binding
-Two-way data binding combines the square brackets of property binding with the parentheses of event binding in a single notation using the ngModel directive. Tip, to remember that the parentheses go inside the brackets, visualize a banana in a box. [()]
+Two-way data binding combines the square brackets of property binding with the parentheses of event binding in a single notation using the ngModel directive. Tip, to remember that the parentheses go inside the brackets, visualize a banana in a box. ```html [()]```
 
 In this example, the name property value flows from the component to the input box as with property binding. This is why the input box contains 'World' when the page is displayed. See the application output below.
 
