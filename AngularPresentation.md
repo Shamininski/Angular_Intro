@@ -1,21 +1,31 @@
+* [Chapter 1 - Introduction](#chapter1)
+* [Chapter 2 - Architecture ](#chapter2)
+* [Chapter 3 - Components](#chapter3)
+* [Chapter 4 - Interpolation and Property Binding](#chapter4)
+* [Chapter 5 - Class & Styles Binding](#chapter5)
+* [Chapter 6 - Event Binding and references](#chapter6)
+* [Chapter 7 - Two way Binding](#chapter7)
+
+
+
 <!-- Noel's Section -->
-Introduction
+## <a name="chapter1"/> Introduction
 
 
 
 
 
-Architecture 
+## <a name="chapter2"/>Architecture 
 
 
 
 
-Components
+## <a name="chapter3"/>Components
 
 
 
 
-Interpolation and Property Binding
+## <a name="chapter4"/>Interpolation and Property Binding
 
 
 
@@ -24,17 +34,18 @@ Interpolation and Property Binding
 
 
 <!-- Justine's Section-->
-Class & Styles Binding
+## <a name="chapter5"/>Class & Styles Binding
 
-In this article, we are going to learn how to bind classes and styles to an HTML element.
+In this part, we are going to learn how to bind classes and styles to an HTML element.
 First, let us create a new class, as shown below
 
 @Component({ 
            selector: "my-tuts", 
            template: `<h2>{{title}}</h2>`, 
            styles: [`.myClass{ 
-				color:red; 
-			}'] 
+				        color:red; 
+			    }'
+            ] 
 	})
 
 
@@ -56,6 +67,7 @@ export class RathrolaComponent {
    public applyclass = true; 
    public applyblue = true; 
 }
+
 Now, let’s create another div tag, as shown below.
 
 <div [style.color]="applyblue?'blue':orange">Blue</div>`,
@@ -72,7 +84,7 @@ export class RathrolaComponent {
 
 
 
-Event Binding and references
+## <a name="chapter6"/>Event Binding and references
 
 In this article, we are going to learn about event binding and references.
 Now, we are only setting the values to DOM element properties, but there is no way to retrieve DOM element properties.
@@ -98,11 +110,11 @@ console.log('ButtonClicked');
 }
 
 
-Save this and run it 
+## <a name="chapter7"/>Save this and run it 
 
 
 
-Two way Binding
+## <a name="chapter8"/>Two way Binding
 
 
 
