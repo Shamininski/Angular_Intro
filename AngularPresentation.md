@@ -5,6 +5,23 @@
 - [Chapter 5 - Class & Styles Binding](#chapter5)
 - [Chapter 6 - Event Binding and references](#chapter6)
 - [Chapter 7 - Two way Binding](#chapter7)
+- [Chapter 8 - Structural Directives](#chapter8)
+- [Chapter 9 - Attribute Directives](#chapter9)
+- [Chapter 10 - Inputs & Outputs  ](#chapter10)
+- [Chapter 11 - Pipes and Transmissions](#chapter11)
+- [Chapter 12 - Template Driven Forms](#chapter12)
+- [Chapter 13 - TDF Validation](#chapter13)
+- [Chapter 14 - Model Driven Forms](#chapter14)
+- [Chapter 15 - MDF Validation](#chapter15)
+- [Chapter 16 - Services](#chapter16)
+- [Chapter 17 - Dependency Injection](#chapter17)
+- [Chapter 18 - HTTP and Observables](#chapter18)
+- [Chapter 19 - Routing & Navigation](#chapter19)
+- [Chapter 20 - Redirects & pathMatch](#chapter20)
+- [Chapter 21 - Animations in Angular](#chapter21)
+- [Chapter 22 - Angular CLI](#chapter22)
+
+
 
 <!-- Noel's Section -->
 
